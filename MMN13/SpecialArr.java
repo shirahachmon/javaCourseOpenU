@@ -13,6 +13,8 @@ public class SpecialArr {
      */
 
     public static int[] specialArr(int[] arr, int median){
+        int length=arr.length;
+
         // Iterate through arr and adjust values based on even and odd indexes
         for (int i = 0; i < length; i++) {
             
@@ -67,33 +69,4 @@ public class SpecialArr {
 
         return arr;
     } 
-
-    /** Not to send thid function as part of the MMN, it only for us to calculate coreectly. */
-    public static int findMedian(int[] arr) {
-        Arrays.sort(arr);
-        int n = arr.length;
-        if (n % 2 != 0) {
-            return arr[n / 2];
-        } else {
-            return arr[(n / 2)];
-        }
-    }
-
-    public static void main(String[] args){
-        System.out.println ("********** Question 1 **********\n");
-        int[] arr1 = {4, -5, -3, 1, 2, 7, 0};
-        int med1 = 1;
-        System.out.println("Checking method 'specialArr' on array "+toString(arr1)+" and med = " + med1);
-        int[] studentResult1;
-        studentResult1 = specialArr(arr1, med1);
-        System.out.println("Result is: "+toString(studentResult1));
-        int result=checkIfSpecial(studentResult1);
-        if(result>=0)
-        {
-            System.out.println ("Error!!! The array is not a special array." );
-            System.out.println("The first problematic index is : "+result);
-    
-        }
-        System.out.println();
-    }
 }
