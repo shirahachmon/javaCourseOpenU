@@ -8,6 +8,7 @@ public class First {
     // סיבוכיות מקום של O(1)
     // סיבוכיות זמן ריצה של O(n)
 
+    // This function finds the smallest missing positive integer from an unsorted array of integers. 
     public static int first (int[] arr){
 
         // Placing positive numbers in the right order. 
@@ -21,13 +22,9 @@ public class First {
         }
     
         // Searching for the smaller first value that does not found in the array. 
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] != i + 1) {
-                return i + 1;
-            }
-        }
+        for (int i = 0; i < arr.length; i++)  if (arr[i] != i + 1) return i + 1;
     
         // Edge case- if all positive numbers are there, then the smaller first number will be the last one plus 1. 
         return arr.length + 1;
-    }    
+    }  
 }
